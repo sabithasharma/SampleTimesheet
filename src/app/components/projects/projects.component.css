@@ -1,0 +1,31 @@
+
+.projectsForm {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.projectsFormField {
+  width: 90%;
+}
+
+.content_nav {
+  top: 5em;
+}
+
+.projectSave {
+  background-color: deepskyblue;
+  font-weight: 600;
+}
+
+.projectList {
+  background-color: dodgerblue;
+  display: inline-block;
+  width: 25%;
+}
+
+.projectItem {
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid ghostwhite;
+}
+

@@ -1,0 +1,22 @@
+
+<div class="content_nav">
+  <form class="projectsForm" autocomplete="off">
+    <mat-form-field class="projectsFormField">
+        <input matInput placeholder="Enter Project" value="" [formControl]="projectControl">
+        <mat-error *ngIf="projectControl.hasError('required')">
+          Project is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br/>
+
+<button class = "projectSave" mat-raised-button color="primary" (click) = "onSave()"> Save </button>
+</form>
+
+
+
+<h3> Projects List </h3>
+<mat-list role="list" class = "projectList">
+    <mat-list-item class = "projectItem" role="listitem" *ngFor="let index of projectsList" > {{ index }} </mat-list-item>
+  </mat-list>
+
+</div>

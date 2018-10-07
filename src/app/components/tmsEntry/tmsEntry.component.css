@@ -1,0 +1,64 @@
+.btn-group button {
+    background-color: cadetblue; /* Green background */
+    border: 0px;
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: right; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: darkblue;
+}
+
+.btn-group {
+    display: inline-block;
+    right: 10em;
+    position: absolute;
+}
+
+.btn-group button {
+    background-color: #3f51b5;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.save {
+    background-color: deepskyblue;
+    font-weight: 600;
+}
+
+.projectSelection {
+    float: left;
+    padding-top: 4em;
+    width: 8%;
+}
+ul {
+    display: grid;
+    float: left;
+    padding: 2em;
+}
+
+input[typetotalattr] {
+    background-color: lightslategray;
+    color: white;
+} {
+    background-color: black;
+    color: white;
+}
+
+
+
+

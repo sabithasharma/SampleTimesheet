@@ -1,0 +1,49 @@
+.register-form {
+  width: 40%;
+  padding: 2%;
+  border: 1px solid skyblue;
+  border-top: 3px solid skyblue;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  }
+
+  register-full-width {
+    width: 100%;
+  }
+
+  .labelField,
+  mat-form-field {
+    width: 40%;
+    display: inline-block;
+  }
+
+  .registerSubmit{
+    background-color: skyblue !important;
+    font-weight: 600;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    color: lightslategrey;
+  }  
+
+  label {
+    font-size: 1.1em;
+  }
+
+  .imageUpload {
+    padding-left:30%;
+  }
+
+  .errorMsg {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+
+  .panel-heading {
+    padding-top: 10px;
+    text-align: center;
+  }
+  

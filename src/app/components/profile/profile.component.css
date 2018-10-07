@@ -1,0 +1,28 @@
+.profileCard {
+    display: inline-block;
+    background-color: skyblue;
+    color: cornsilk;
+    text-align: left;
+    font-weight: 600;
+    padding: 2em;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+
+i {
+    width: 15%;
+    float: left;     
+}
+
+p {
+    width: 80%;
+    margin: 5px;
+    float: left;
+}
+
+.profileContent {
+    padding: 1.5em;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 2em;
+}

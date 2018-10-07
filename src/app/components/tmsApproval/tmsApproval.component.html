@@ -1,0 +1,45 @@
+<div class="content_nav">
+    <mat-list role="list" class = "employeeList">
+        <mat-list-item class = "employeeItem" role="listitem" *ngFor="let index of EmployeeList" (click) = "displayTimesheet(index)"> 
+            {{ index.username }} </mat-list-item>
+      </mat-list>
+    
+    
+    <div *ngIf="showTimesheet" class= "example-container mat-elevation-z8">
+        <div class="example-header">
+            <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+        </div>
+
+        <mat-table #table [dataSource]="dataSource">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="userId">
+                <mat-header-cell *matHeaderCellDef> UserID </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.userId}} </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="dates">
+                <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.dates}} </mat-cell>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="dateValue">
+                <mat-header-cell *matHeaderCellDef> No.of Hrs </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.dateValue}} </mat-cell>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="project">
+                <mat-header-cell *matHeaderCellDef> Project </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.project}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</div>

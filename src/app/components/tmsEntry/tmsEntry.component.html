@@ -1,0 +1,44 @@
+<div class="content_nav">
+    <div class="week-picker"></div>
+    <br />
+    <br />
+    <strong>
+        <span id="startDate"></span> -
+        <span id="endDate"></span>
+    </strong>
+    <mat-form-field class ="projectSelection">
+        <mat-select [(value)]="selected" placeholder="" [disabled] = "true">
+          <mat-option *ngFor="let project of projectsList" [value] ="project">
+              {{project}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <!--table border="1">
+        <tr>
+            <th> Sun </th>
+            <th> Mon </th>
+            <th> Tue </th>
+            <th> Wed </th>
+            <th> Thu </th>
+            <th> Fri </th>
+            <th> Sat </th>
+            <th> Total </th>
+        </tr>
+    </table-->
+    <ul>
+        <mat-checkbox *ngFor="let task of typesOfTasks ; let i = index" [attr.data-index]="i" (change) = "onCheckbox($event)"> {{ task.text }}</mat-checkbox>
+        <mat-checkbox *ngFor="let leave of typesOfLeave ; let i = index" [attr.data-index]="i" (change) = "onCheckbox($event)"> {{ leave.text }}</mat-checkbox>
+    </ul>
+
+
+    <div id="wrapper">
+    </div>
+    <br/>
+    <button class="save hide" mat-raised-button color="primary" (click)="validateAndSave()"> Save </button>
+    <div class="btn-group">
+        <button class="submit" (click)="submitTimesheet()">Submit Timesheet </button>
+        <button class="download" (click)="downloadTimesheet()">Download Timesheet </button>
+    </div>
+
+    <label class="totalHours"></label>
+</div>

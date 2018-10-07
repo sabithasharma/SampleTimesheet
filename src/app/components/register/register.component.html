@@ -1,0 +1,121 @@
+<form class="register-form">
+
+    <div class="register">
+        <h2> REGISTER</h2>
+    </div>
+    <div class="errorMsg hide">
+        <div class="panel-heading"> Please enter all the fields !!</div>
+        <br/>
+    </div>
+
+    <div class="labelField">
+        <label> Username </label>
+    </div>
+
+    <mat-form-field class="loginWidth">
+        <input matInput (keyup)="onHideErrMsg()" [formControl]="userControl">
+        <!--mat-error *ngIf="userControl.hasError('required')">
+            username is required
+        </mat-error-->
+    </mat-form-field>
+    <br/>
+
+
+    <div class="labelField">
+        <label> Password </label>
+    </div>
+    <mat-form-field class="register-full-width">
+        <input matInput [type]="hide ? 'password' : 'text'" (keyup)="onHideErrMsg()" [formControl]="passwordControl">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        <mat-error *ngIf="passwordControl.hasError('required')">
+            password is required
+        </mat-error>
+    </mat-form-field>
+    <br/>
+
+    <div class="labelField">
+        <label> Firstname </label>
+    </div>
+
+    <mat-form-field class="loginWidth">
+        <input matInput (keyup)="onHideErrMsg()" [formControl]="firstnameControl">
+        <mat-error *ngIf="firstnameControl.hasError('required')">
+            first name is required
+        </mat-error>
+    </mat-form-field>
+    <br/>
+
+    <div class="labelField">
+        <label> Lastname </label>
+    </div>
+
+    <mat-form-field class="loginWidth">
+        <input matInput (keyup)="onHideErrMsg()" [formControl]="lastnameControl">
+        <mat-error *ngIf="lastnameControl.hasError('required')">
+            last name is required
+        </mat-error>
+    </mat-form-field>
+    <br/>
+
+
+    <div class="labelField">
+        <label> Birthday </label>
+    </div>
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" (keyup)="onHideErrMsg()" placeholder="Choose a date" [formControl]="birthdayControl">
+        <mat-error *ngIf="birthdayControl.hasError('required')">
+            birthday is required
+        </mat-error>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br/>
+
+    <div class="labelField">
+        <label> Phonenumber </label>
+    </div>
+    <mat-form-field class="register-full-width">
+        <input matInput value="" (keyup)="onHideErrMsg()" [formControl]="phoneControl">
+        <mat-error *ngIf="phoneControl.hasError('required')">
+            birthday is required
+        </mat-error>
+    </mat-form-field>
+    <br/>
+
+    <div class="labelField">
+        <label> Emergency contact number </label>
+    </div>
+    <mat-form-field class="register-full-width">
+        <input matInput value="" (keyup)="onHideErrMsg()" [formControl]="emergencyControl">
+        <mat-error *ngIf="emergencyControl.hasError('required')">
+            emergency phone number is required
+        </mat-error>
+    </mat-form-field>
+    <br/>
+
+    <div class="labelField">
+        <label> Address </label>
+    </div>
+    <mat-form-field class="register-full-width">
+        <input matInput value="" (keyup)="onHideErrMsg()" [formControl]="addressControl">
+        <mat-error *ngIf="addressControl.hasError('required')">
+            address is required
+        </mat-error>
+    </mat-form-field>
+    <br/>
+
+
+    <div class="labelField">
+        <label> Upload Image </label>
+    </div>
+    <div class="imageUpload">
+        <input type="file" ng2FileSelect [uploader]="uploader" />
+        <button type="button" class="btn btn-success btn-s" (click)="onUpload();" [disabled]="!uploader.getNotUploadedItems().length">
+            Upload
+        </button>
+    </div>
+
+
+    <button class="registerSubmit" mat-raised-button color="primary" (click)="validateRegistration()"> Submit </button>
+
+</form>

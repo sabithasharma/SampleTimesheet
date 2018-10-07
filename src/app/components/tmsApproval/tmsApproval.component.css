@@ -1,0 +1,41 @@
+/* Structure */
+.employeeList {
+  background-color: dodgerblue;
+  display: inline-block;
+  width: 25%;
+  position: absolute;
+  left: 3em;
+}
+
+.employeeItem {
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid ghostwhite;
+}
+
+.employeeItem:hover {
+  background-color: darkblue;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 500px;
+    margin-left: 40%;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }

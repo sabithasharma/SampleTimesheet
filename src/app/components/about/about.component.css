@@ -1,0 +1,8 @@
+.content_nav {
+    width: 90%;
+    padding: 3em;
+}
+
+.contents {
+    display: table-cell;
+}

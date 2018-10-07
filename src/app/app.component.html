@@ -1,0 +1,24 @@
+<header>
+    <ul>
+        <li>
+            <a routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li>
+            <a routerLink="/projects" routerLinkActive="active"> Projects</a>
+        </li>
+        <li> <a routerLink="/about" routerLinkActive="active"> About</a>
+        </li>
+        <li class = "profileHeader" mat-button [matMenuTriggerFor]="menu" alt = "Profile">
+            <mat-menu #menu="matMenu">
+                <div class="profilePic" mat-menu-item> </div>
+                <button class = "profileButton" mat-menu-item (click) = "onLogout()">Logout</button>
+                <button class = "profileButton" mat-menu-item (click) = "onProfile()">Profile</button>
+            </mat-menu>
+        </li>
+
+    </ul>
+</header>
+<router-outlet></router-outlet>
+<footer>
+    <p> Cubane Timesheet Tracker</p>
+</footer>

@@ -1,0 +1,188 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+    margin: 0px;
+    height:100vh;
+    overflow: hidden;
+}
+
+body.login {
+    background-image: url("/assets/img/loginBG.jpg");
+    background-size: cover;
+    overflow-y: hidden;
+   
+}
+.profilePic {
+    background-image: url("/assets/img/sabitha.jpg");
+    width: 248px;
+    height: 200px !important;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.profilePic.mat-menu-item:hover:not([disabled]) {
+    background-color: "" !important;
+}
+
+.about,
+.about1,
+.about2 {
+    background-image: url("/assets/img/about.png");
+    width: 30em;
+    height: 300px;
+    background-repeat: no-repeat;
+    margin-top: 2em;
+    float: left;
+}
+.about1 {
+    background-image: url("/assets/img/about1.png");    
+}
+.about2 {
+    background-image: url("/assets/img/about2.png");
+}
+
+.profileHeader {
+    background-image: url(/assets/img/profile_icon1.png);
+    width: 3em;
+    height: 2.9em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 1em;
+    top:  0.05em;
+    cursor: pointer;
+}
+
+.profileButton {
+    width: 50% !important;
+    padding-left: 2.5em !important;
+    background-color: aliceblue;
+    border-right: 1px solid grey !important;
+    float: left;
+}
+
+.hide {
+    display: none !important;
+}
+.backdrop {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;    
+    background-color: rgba(0,0,0,0.6);
+}
+header,
+footer {
+    width: 100%;
+    height: 3em;
+    background-color: #3f51b5;
+    position: fixed;
+    border-color: #080808;
+    font-weight: 600;
+}
+header {
+    top:0;
+}
+
+footer {
+     bottom: 0;
+}
+
+header p,
+footer p {
+    color: white;
+    text-align: center;
+}
+
+header li {
+    display: inline-block;
+    margin-right: 2em;
+    color: white;
+}
+
+li.profileHeader {
+    float: right;
+}
+
+header li a {
+    text-decoration: none;
+    color: white;
+}
+
+.content_nav {
+    position: absolute;
+    top: 4em;
+    bottom: 3.5em;
+    width: 100%;
+    padding-left: 1%;
+}
+
+tms_entry tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+}
+
+tms_entry table {
+    background-color: beige;
+    border-spacing: 0px;
+    padding: 1%;
+}
+
+tms_entry input[type="text"] {
+    text-align: center;
+    /*height: 2em;*/
+    width: 100%;
+    font-weight: 600;
+}
+
+tms_entry input[type="text"]:hover {
+    background-color: antiquewhite;
+}
+
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+    background: ghostwhite;
+}
+
+tms_entry {
+    font-weight: 600;
+}
+
+tms_entry #wrapper td,
+tms_entry #wrapper th {
+    width: 6em;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+tms_entry #wrapper th:last-child {
+    background-color: lightslategray;
+}
+
+figure.mat-figure {
+    font-weight: 600;
+    color: darkslateblue;
+}
+
+.register-form mat-form-field .mat-form-field-flex  {
+    border: 0.5px solid #cbcbd8;
+    border-radius: 3px;
+  }
+
+  .register-form .mat-form-field-underline {
+      display: none;
+  }

@@ -1,0 +1,53 @@
+.loginForm {
+    width: 300px;
+    height: 300px;
+    padding: 2%;
+    border-top: 3px solid red;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: whitesmoke;
+  }
+
+  .loginTitle {
+    padding-top: 5%;
+    display: inline-flex;
+  }
+
+  .progressBar {
+    top: 12px;
+    width: 300px;
+    position: absolute;
+  }
+  .logo {   
+    width: 100px;
+    height: 30px;
+    background-image: url("/assets/img/timesheetLogo.png");
+    background-repeat: no-repeat;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+    color: lightslategrey;
+  }  
+  
+  .loginWidth {
+    width: 100%;
+  }
+
+  .errorMsg {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  .panel-heading {
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .registerButton {
+    float: right;
+    background: cornflowerblue;
+    color: white;
+  }
+  
+  

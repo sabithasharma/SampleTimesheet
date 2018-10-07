@@ -1,0 +1,31 @@
+
+<div class="backdrop" *ngIf="processing"></div>
+<form class="loginForm" autocomplete="off">
+  <mat-progress-bar class= "progressBar" mode="indeterminate" *ngIf="processing"></mat-progress-bar>
+  <div class = "loginTitle clearfix">
+    <div class = "logo"> </div>
+      <h2> Timesheet Tracker</h2>
+  </div>
+  <div class = "errorMsg hide">
+    <div class="panel-heading"> Invalid Login</div>
+  <br/>
+  </div>
+    <mat-form-field class="loginWidth">
+    <input matInput placeholder="username" (keyup) = "onHideErrMsg()" [formControl]="userControl">
+    <mat-error *ngIf="userControl.hasError('required')">
+      username is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+ <br>
+ <mat-form-field class="loginWidth">
+  <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" (keyup) = "onHideErrMsg()" [formControl]="passwordControl">
+  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  <mat-error *ngIf="passwordControl.hasError('required')">
+    password is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+ 
+  <br>
+  <button mat-raised-button color="primary" (click) = "validateLogin()"> Submit </button>
+  <button mat-raised-button class = "registerButton" (click) = "onRegister()"> Sign Up </button>
+</form>
